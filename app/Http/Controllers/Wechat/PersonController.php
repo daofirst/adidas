@@ -21,6 +21,6 @@ class PersonController extends Controller
 
         $person = wechat_user();
 
-        dd($person);
+        return view('wechat/welcome', compact($person));
     }
 }

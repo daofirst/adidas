@@ -15,7 +15,7 @@ class WeChatController extends Controller
 
 
     /**
-     * 处理微信的请求消息
+     * 处理微信的请求认证&消息
      *
      * @return string
      */
@@ -29,7 +29,7 @@ class WeChatController extends Controller
     }
 
     /**
-     * 设置菜单
+     * 设置公众号底部菜单
      */
     public function createMenu()
     {
@@ -70,7 +70,7 @@ class WeChatController extends Controller
     }
 
     /**
-     * 授权回调
+     * OAuth 授权回调
      */
     public function authorizeCallback()
     {
@@ -79,8 +79,6 @@ class WeChatController extends Controller
         // 获取 OAuth 授权结果用户信息
         /** @var User $user */
         $user = $oauth->user();
-
-        $cookie = cookie('wechat_user', $user->toArray(), 60);
 
         logger('微信认证', $user->toArray());
 
