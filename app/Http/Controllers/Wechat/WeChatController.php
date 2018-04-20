@@ -2,8 +2,18 @@
 
 namespace App\Http\Controllers\Wechat;
 
+use Overtrue\Socialite\User;
+
 class WeChatController extends Controller
 {
+    protected $app;
+
+    public function __construct()
+    {
+        $this->app = app('wechat.official_account');
+    }
+
+
     /**
      * 处理微信的请求消息
      *
@@ -13,9 +23,7 @@ class WeChatController extends Controller
     {
         \Log::info('request arrived.');
 
-        $app = app('wechat.official_account');
-
-        $response = $app->server->serve();
+        $response = $this->app->server->serve();
 
         return $response;
     }
@@ -25,8 +33,6 @@ class WeChatController extends Controller
      */
     public function createMenu()
     {
-        $app = app('wechat.official_account');
-
         $buttons = [
             [
                 "type" => "view",
@@ -60,6 +66,22 @@ class WeChatController extends Controller
             ],
         ];
 
-        $app->menu->create($buttons);
+        $this->app->menu->create($buttons);
+    }
+
+    /**
+     * 授权回调
+     */
+    public function authorizeCallback()
+    {
+        $oauth = $this->app->oauth;
+
+        // 获取 OAuth 授权结果用户信息
+        /** @var User $user */
+        $user = $oauth->user();
+
+        \Cache::put('wechat_user', $user->toArray());
+
+        return redirect()->intended('/');
     }
 }
