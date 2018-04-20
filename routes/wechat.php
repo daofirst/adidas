@@ -9,12 +9,12 @@ Route::any('/menus/create', 'WeChatController@createMenu');
 // 微信网页用户授权回调
 Route::any('/authorize_callback', 'WeChatController@authorizeCallback');
 
-Route::group(['middleware' => 'wechat.authorize'], function () {
+Route::group(['middleware' => 'wechat.oauth'], function () {
 
     // 个人中心
     Route::get('/person/center', 'PersonController@index');
 
     Route::any('/', function () {
-        dd('开发中...');
+        dd(wechat_user());
     });
 });
