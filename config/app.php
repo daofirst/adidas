@@ -177,6 +177,22 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        
+        // Wechat
+        Overtrue\LaravelWeChat\ServiceProvider::class,
+
+        // Ide Helper
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        // Debuger
+        Barryvdh\Debugbar\ServiceProvider::class,
+
+        // OSS
+        Jacobcyl\AliOSS\AliOssServiceProvider::class,
+
+        // repository
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +241,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // Wechat
+        'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
+
+        // Debuger
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
