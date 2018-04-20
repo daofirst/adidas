@@ -80,9 +80,9 @@ class WeChatController extends Controller
         /** @var User $user */
         $user = $oauth->user();
 
-        \Cache::put('wechat_user', $user->toArray());
+        \Cache::put('wechat_user', $user->toArray(), 3600);
 
-        logger('微信认证');
+        logger('微信认证', $user->toArray());
 
         return redirect()->intended(url('/wechat'));
     }
