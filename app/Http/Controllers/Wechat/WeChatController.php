@@ -80,10 +80,10 @@ class WeChatController extends Controller
         /** @var User $user */
         $user = $oauth->user();
 
-        \Cache::put('wechat_user', $user->toArray(), 3600);
+        $cookie = cookie('wechat_user', $user->toArray(), 60);
 
         logger('微信认证', $user->toArray());
 
-        return redirect()->intended(url('/wechat/person/center'));
+        return redirect()->intended(url('/wechat/person/center'))->cookie($cookie);
     }
 }
