@@ -17,7 +17,5 @@ Route::group(['middleware' => 'wechat.oauth'], function () {
     // 个人中心
     Route::get('/person/center', 'PersonController@index');
 
-    Route::any('/', function () {
-        dd(wechat_user());
-    });
+    Route::any('/', 'PersonController@index');
 });

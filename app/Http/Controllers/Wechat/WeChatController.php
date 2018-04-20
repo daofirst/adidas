@@ -77,6 +77,7 @@ class WeChatController extends Controller
         $oauth = $this->app->oauth;
 
         // 获取 OAuth 授权结果用户信息
+
         /** @var User $user */
         $user = $oauth->user();
 
