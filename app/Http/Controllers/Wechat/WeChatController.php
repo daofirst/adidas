@@ -82,6 +82,6 @@ class WeChatController extends Controller
 
         \Cache::put('wechat_user', $user->toArray());
 
-        return redirect()->intended('/');
+        return redirect()->intended(url('/wechat'));
     }
 }
