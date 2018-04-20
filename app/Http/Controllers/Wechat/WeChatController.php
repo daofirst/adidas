@@ -31,7 +31,7 @@ class WeChatController extends Controller
             [
                 "type" => "view",
                 "name" => "立即报修",
-                "url"  => url('/repairs/create')
+                "url"  => url('/')
             ],
             [
                 "name"       => "订单",
@@ -39,33 +39,27 @@ class WeChatController extends Controller
                     [
                         "type" => "view",
                         "name" => "维修进度",
-                        "url"  => url('/repairs/list/in_progress')
+                        "url"  => url('/')
                     ],
                     [
                         "type" => "view",
                         "name" => "已完成",
-                        "url"  => url('/repairs/list/finish')
+                        "url"  => url('/')
                     ],
                     [
                         "type" => "view",
                         "name" => "已取消",
-                        "key" => url('/repairs/list/cancel')
+                        "key" => url('/')
                     ],
                 ],
             ],
             [
                 "type" => "view",
                 "name" => "个人中心",
-                "url"  => url('/person/center')
+                "url"  => url('/')
             ],
         ];
 
         $app->menu->create($buttons);
-
-        return response()->json([
-            'code' => 0,
-            'message' => '设置菜单成功',
-            'data' => $buttons
-        ]);
     }
 }
