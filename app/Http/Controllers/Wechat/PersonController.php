@@ -21,6 +21,6 @@ class PersonController extends Controller
 
         $person = wechat_user()->toArray();
 
-        return view('wechat/welcome', compact($person));
+        return view('wechat/welcome', compact('person'));
     }
 }
