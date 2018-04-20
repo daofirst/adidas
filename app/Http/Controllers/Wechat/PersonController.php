@@ -19,7 +19,7 @@ class PersonController extends Controller
     public function index()
     {
 
-        $person = wechat_user();
+        $person = wechat_user()->toArray();
 
         return view('wechat/welcome', compact($person));
     }

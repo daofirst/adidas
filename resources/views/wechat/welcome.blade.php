@@ -69,7 +69,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    欢迎进入Adidas报修系统 {{ $person->name }}
+                    欢迎进入Adidas报修系统 {{ $person['name'] }}
                 </div>
             </div>
         </div>
