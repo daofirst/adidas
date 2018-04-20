@@ -14,11 +14,10 @@ class WeChatController extends Controller
         \Log::info('request arrived.');
 
         $app = app('wechat.official_account');
-        $app->server->push(function($message){
-            return "欢迎关注 Adidas 报修系统";
-        });
 
-        return $app->server->serve();
+        $response = $app->server->serve();
+
+        return $response;
     }
 
     /**
