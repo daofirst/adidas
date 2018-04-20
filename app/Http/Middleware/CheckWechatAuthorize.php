@@ -15,7 +15,7 @@ class CheckWechatAuthorize
      */
     public function handle($request, Closure $next)
     {
-        if (! ( \Cache::has('wechat_user') ) || empty(\Cache::get('wechat_user'))) {
+        if (empty(wechat_user())) {
             $app = app('wechat.official_account');
 
             $oauth = $app->oauth;

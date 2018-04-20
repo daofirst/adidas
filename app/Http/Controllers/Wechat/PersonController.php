@@ -19,7 +19,7 @@ class PersonController extends Controller
     public function index()
     {
 
-        $person = \Cache::get('wechat_user');
+        $person = wechat_user();
 
         dd($person);
     }
