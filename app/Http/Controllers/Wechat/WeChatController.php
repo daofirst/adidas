@@ -84,6 +84,6 @@ class WeChatController extends Controller
 
         logger('微信认证', $user->toArray());
 
-        return redirect()->intended(url('/wechat'));
+        return redirect()->intended(url('/wechat/person/center'));
     }
 }
