@@ -37,7 +37,7 @@ class WeChatController extends Controller
             [
                 "type" => "view",
                 "name" => "立即报修",
-                "url"  => url('/repairs/create')
+                "url"  => url('/wechat/repairs/create')
             ],
             [
                 "name"       => "订单",
@@ -45,24 +45,24 @@ class WeChatController extends Controller
                     [
                         "type" => "view",
                         "name" => "维修进度",
-                        "url"  => url('/repairs/list/in_progress')
+                        "url"  => url('/wechat/repairs/list/in_progress')
                     ],
                     [
                         "type" => "view",
                         "name" => "已完成",
-                        "url"  => url('/repairs/list/finish')
+                        "url"  => url('/wechat/repairs/list/finish')
                     ],
                     [
                         "type" => "view",
                         "name" => "已取消",
-                        "url" => url('/repairs/list/cancel')
+                        "url" => url('/wechat/repairs/list/cancel')
                     ],
                 ],
             ],
             [
                 "type" => "view",
                 "name" => "个人中心",
-                "url"  => url('/person/center')
+                "url"  => url('/wechat/person/center')
             ],
         ];
 
