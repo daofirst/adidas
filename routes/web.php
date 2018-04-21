@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    dd('测试GitHub');
+    dd('测试GitHub001');
     return view('welcome');
 });
 
