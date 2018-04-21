@@ -18,7 +18,7 @@ class GitHubController extends Controller
     public function gitHubUpdate()
     {
 
-        $commends = file_get_contents('/var/www/adidas/ftp.sh');
+        $commends = file_get_contents(base_path() . '/ftp.sh');
 
         $commendsArr = explode(PHP_EOL, $commends);
 
