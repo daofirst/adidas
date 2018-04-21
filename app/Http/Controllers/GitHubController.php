@@ -26,13 +26,17 @@ class GitHubController extends Controller
 
         $commends = implode(PHP_EOL, $commendsArr);
 
-        system($commends, $returnvalue);
+        passthru($commends, $returnvalue);
 
         if ($returnvalue != 0){
 
             logger()->error('GitHub Update error.', ['code' => $returnvalue]);
 
         }else{
+
+            \Artisan::call('config:cache');
+            \Artisan::call('cache:clear');
+            \Artisan::call('ide-helper:generate');
 
             logger()->info('GitHub Update success');
 

@@ -1,1 +1,1 @@
-git fetch 2>&1
+sudo git pull
