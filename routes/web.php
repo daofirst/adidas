@@ -16,4 +16,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any('github/update', ['middleware' => 'web', 'uses' => 'GitHubController@gitHubUpdate']);
+Route::any('github/update', ['middleware' => 'github.secret.token', 'uses' => 'GitHubController@gitHubUpdate']);
