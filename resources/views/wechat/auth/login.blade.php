@@ -18,10 +18,10 @@
             <img src="{{ asset('style/images/login_logo.png')}}" alt="" class="login-icon">
         </div>
         <div class="form-item">
-            <input type="text" placeholder="账号" name="phone" class="form-input login-radus " id="Login_name">
+            <input type="text" placeholder="账号" name=user_name" class="form-input login-radus " id="Login_name">
         </div>
         <div class="form-item">
-            <input type="password" placeholder="密码" name="phone" class="form-input login-radus " id="Login_pwd">
+            <input type="password" placeholder="密码" name="password" class="form-input login-radus " id="Login_pwd">
         </div>
         <div class="form-item">
             <div class="login-btn login-radus" id="Submit_btn">登 录</div>
