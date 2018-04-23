@@ -1,0 +1,148 @@
+/* 顶部导航top-nav */
+body,html {
+   height: 100%;
+    font-size: 0.8rem;
+}
+.m-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.7rem;
+    background-color: #fff;
+    z-index: 100;
+    box-sizing: border-box;
+}
+/*主体内容*/
+.m-cnt {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2.7rem 1rem 3rem;
+}
+
+/* 底部导航 */
+.m-foot {
+    width: 100%;
+    /*height: 3rem;*/
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    z-index: 100;
+}
+.m-nav-module {
+    padding: 0.25rem 0;
+    background: #000;
+}
+.m-nav-item {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 33.33%;
+    font-size: 0.6667rem;
+    line-height:1rem;
+    color:#fff;
+}
+.m-nav-item--active {
+    color:#007cff;
+}
+.m-nav-img {
+    height: 1.3rem;
+}
+
+/********** 登录 ************/
+.m-login {
+    height: 100%;
+    background: url("../images/login_bg.jpg") no-repeat center center;
+    background-size: cover ;
+}
+input {
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;border: none;
+}
+.login-form {
+    position: absolute;
+    top:50%;
+    width: 100%;
+    margin-top:-8.6rem;
+}
+.login-icon {
+    width: 100%;
+    margin-bottom: 6.3rem;
+}
+.form-item {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-input {
+    width: 100%;
+    height: 2.5rem;
+    margin: 0.3rem 0;
+    border:1px solid #ddd;
+    padding: 0 0.8rem;
+    box-sizing: border-box;
+    color:#666;
+    font-size: 0.86rem;
+}
+.form-input::-webkit-input-placeholder{
+    color:#51e4c2;
+}
+.form-input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#51e4c2;
+}
+.form-input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#51e4c2;
+}
+.form-input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#51e4c2;
+}
+.login-radus {
+    border-top-left-radius: 1.26667rem;
+    border-bottom-left-radius: 1.26667rem;
+    border-top-right-radius: 1.26667rem;
+    border-bottom-right-radius: 1.26667rem;
+}
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    background: #4fe4c1;
+    color: #fff;
+    font-size: 0.86rem;
+    margin:0 auto;
+    margin-top:3rem;
+}
+
+
+
+
+/**********报修明细**********/
+.rep-cnt {box-sizing: border-box;padding-bottom: 3rem;}
+.rep-tabs {width: 100%;position: fixed;top:0;z-index: 2;background: #fff;}
+.rep-tabs a {width: 50%;display: inline-block;float: left;border-bottom: 2px solid #eee;text-align: center;line-height: 2.5rem;color:#666;}
+.rep-tabs a.active{border-bottom: 2px solid red;}
+.rep-swiper {padding-top: 2.5rem;background: #fff;min-height: 100%;box-sizing: border-box;}
+.rep-detail-list {background: #eee;}
+.swiper-wrapper,.swiper-slide,.swiper-container {min-height: 100%!important;}
+.rep-detail-tit {font-size: 0.7rem;padding:0.5rem 0.4rem;}
+.rep-detail-cnt {background: #fff;margin-bottom: 1px;padding:0.6rem 0.6rem;font-size: 0.85rem; }
+.rep-detail-name {color:#666;font-size: 0.78rem;}
+.rep-detail-name span {color:#000;}
+.rep-detail-value {color: #000;font-size: 0.78rem;}
+.rep-detail-value span {color: #666;}
+/*.swiper-slide {padding-bottom: 3rem;}*/
+.rep-clear {height: 3rem;}
+.rep-status-item {border-bottom:1px solid #eee;padding: 0.6rem 0.6rem;font-size: 0.78rem;line-height: 1.3rem;color:#666;}
+/*.rep-status-title {color:#000;}*/
+/*.rep-status-date {color:#666;}*/
+
+/*门店编辑*/
+.rep-input {border:none;outline: none;text-align: right;}
