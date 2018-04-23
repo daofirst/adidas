@@ -73,7 +73,7 @@ class LoginController extends Controller
 
         try{
             $customer = AdidasCustomerModel::where('user_name',$request->get('username'))->first();
-
+            print_r($customer);die;
             //$customer = AdidasCustomerModel::where([['user_name',$request->get('username')],['password',$request->get('password')]])->first();
             \Auth::guard('wechat')->login($customer);
             $user = \Auth::guard('wechat')->user();
