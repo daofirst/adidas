@@ -4,7 +4,7 @@ if (! function_exists('wechat_user')) {
 
     function wechat_user() {
 
-        dd(env('APP_ENV') );
+        dd(env('DB_HOST'));
         if (env('APP_ENV') == 'local') {
 
             $TestData = [
