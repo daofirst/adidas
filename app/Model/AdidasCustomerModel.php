@@ -10,5 +10,5 @@ use Illuminate\Database\Eloquent\Model;
  * @package App\Model
  */
 class AdidasCustomerModel extends Model{
-    protected $table = 'xdb_cusrtomer';
+    protected $table = 'xdb_customers';
 }
