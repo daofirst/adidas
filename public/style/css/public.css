@@ -1,6 +1,6 @@
 /* 顶部导航top-nav */
 body,html {
-   height: 100%;
+    height: 100%;
     font-size: 0.8rem;
 }
 .m-nav {
@@ -50,10 +50,10 @@ body,html {
     color:#fff;
 }
 .m-nav-item--active {
-    color:#007cff;
+    color:#50e3c2;
 }
 .m-nav-img {
-    height: 1.3rem;
+    height: 1.34rem;
 }
 
 /********** 登录 ************/
