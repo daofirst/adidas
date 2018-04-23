@@ -4,8 +4,7 @@ if (! function_exists('wechat_user')) {
 
     function wechat_user() {
 
-        dd(config('app.env'));
-        if (env('APP_ENV') == 'local') {
+        if (config('app.env') == 'local') {
 
             $TestData = [
                 'id' => 'oK4b2wocWmsU6kk3hUYXbo03OTC0',
