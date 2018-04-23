@@ -69,9 +69,9 @@ input {
 }
 .login-form {
     position: absolute;
-    top:50%;
+    bottom:13.2%;
     width: 100%;
-    margin-top:-8.6rem;
+    /*margin-top:-8.6rem;*/
 }
 .login-icon {
     width: 100%;
@@ -113,7 +113,7 @@ input {
 .login-btn {
     display: block;
     width: 100%;
-    padding: 0.7rem 0;
+    padding: 0.78rem 0;
     background: #4fe4c1;
     color: #fff;
     font-size: 0.86rem;
