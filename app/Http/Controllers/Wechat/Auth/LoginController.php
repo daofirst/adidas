@@ -42,6 +42,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
+        dd(222);die;
         return view('wechat.auth.login');
     }
 
@@ -55,12 +56,13 @@ class LoginController extends Controller
         return \Auth::guard('wechat');
     }
 
+
     /**
      * 登录验证
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function validateCustomerLogin(Request $request)
+    public function login(Request $request)
     {
         $this->validate($request, [
             'user_name' => 'required',
@@ -90,6 +92,4 @@ class LoginController extends Controller
             ]);
         }
     }
-
-
 }
