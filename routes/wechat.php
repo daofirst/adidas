@@ -12,10 +12,11 @@ Route::any('/authorize_callback', 'WeChatController@authorizeCallback');
 /*
  * 中间件: 微信用户账号公众号授权, ...系统用户登录
  */
-Route::group(['middleware' => 'wechat.oauth'], function () {
+//Route::group(['middleware' => 'wechat.oauth'], function () {
 
     // 个人中心
     Route::get('/person/center', 'PersonController@index');
 
     Route::any('/', 'PersonController@index');
-});
+    
+//});
