@@ -21,5 +21,9 @@ Route::any('/authorize_callback', 'WeChatController@authorizeCallback');
 
     Auth::routes();
 
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::group(['middleware' => 'auth:wechat'], function () {
+
+        Route::get('/home', 'HomeController@index')->name('home');
+
+    });
 //});
