@@ -42,7 +42,6 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        dd(222);die;
         return view('wechat.auth.login');
     }
 
@@ -81,7 +80,7 @@ class LoginController extends Controller
                     'code' => 200,
                     'message' => '登录成功',
                     'data' => $user
-                ])  ;
+                ]);
             }
         }
 
