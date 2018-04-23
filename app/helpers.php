@@ -33,7 +33,7 @@ if (! function_exists('wechat_user')) {
                 "provider" => "WeChat"
             ];
 
-            return $TestData;
+            return collect($TestData);
 
         }
 
