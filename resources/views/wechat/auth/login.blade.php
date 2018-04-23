@@ -51,16 +51,16 @@
                 dataType: "json",
                 success: function(data){
                     if(data.code=="0"){
-
+                        window.location=data.href;
                     }else {
                         layer.open({
-                            content: data.msg
+                            content: data.message
                             ,btn: 'OK'
                         });
                     }
                 },error:function(data){
                     layer.open({
-                        content: data.msg
+                        content: data.message
                         ,btn: 'OK'
                     });
                 }
