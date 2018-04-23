@@ -17,3 +17,6 @@ Route::get('/', function () {
 });
 
 Route::any('github/update', ['middleware' => 'github.secret.token', 'uses' => 'GitHubController@gitHubUpdate']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

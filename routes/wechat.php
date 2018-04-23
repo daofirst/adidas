@@ -18,5 +18,8 @@ Route::any('/authorize_callback', 'WeChatController@authorizeCallback');
     Route::get('/person/center', 'PersonController@index');
 
     Route::any('/', 'PersonController@index');
-    
+
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
 //});
